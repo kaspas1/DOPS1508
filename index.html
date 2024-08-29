@@ -1,21 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" dir="ltr">
     <head>
         <title> DISRAELY OMAR PASTOR SOLORZANO</title>
+        <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
         <meta charset="utp-8">
-        <meta name="viewport" content="width-devices-width, initial scales">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="title" content="APLICACION PARA CONVERSION DE TEMPERATURAS">
         <META name="description" content="convierte unidades de temperaturas">
         <meta name="theme color" content="FFD300">
+        <link rel="stylesheet" href="css/converter.css" />
+
     </head>
 
     <body>
-        <header> TITULAR HEADER</header>
-        <nav> ETIQUETA NAV</nav>
-        <section> ETIQUETA SECTION
-            <ARTicle> ETIQUETA ARTICLE</ARTicle>
-            <aside> ETIQUETA ASIDE</aside>
-        </section>
-        <footer> ETIQUETA FOOTER</footer>
+        <h1>CONVERTIDOR DE TEMPERATURA</h1>
+        <form id="converter"> 
+            <label for="input-temp"> Temperatura</label>
+            <input type="text" id="input-temp" name="input-temp" value="20" />
+            <label for="input-unit"> De</label>
+            <select id="input-temp" name="input-temp" >
+                <option value="c" selected>Celsius</option>
+                <option value="f">Farenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+            <label for="output-unit"> A</label>
+            <select id="output-unit" name="output-unit" >
+                <option value="c" selected>Celsius</option>
+                <option value="f">Farenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+            <output id="output-temp" name="output-temp" for="input-temp input-unit output-unit">68 F</output>
+        
+        </form>
+        <script src="js/converter.js"></script>
     </body>
 </html>
