@@ -9,6 +9,7 @@
         <META name="description" content="convierte unidades de temperaturas">
         <meta name="theme color" content="FFD300">
         <link rel="stylesheet" href="css/converter.css" />
+        <link rel="manifest" href="manifest.json" />
 
     </head>
 
@@ -18,7 +19,7 @@
             <label for="input-temp"> Temperatura</label>
             <input type="text" id="input-temp" name="input-temp" value="20" />
             <label for="input-unit"> De</label>
-            <select id="input-temp" name="input-temp" >
+            <select id="input-unit" name="input-unit" >
                 <option value="c" selected>Celsius</option>
                 <option value="f">Farenheit</option>
                 <option value="k">Kelvin</option>
@@ -33,5 +34,10 @@
         
         </form>
         <script src="js/converter.js"></script>
+        <script>
+            if('serviceWorker' in navigator){
+                navigator.serviceWorker.register('sw.js', {scope: './'})
+            }
+        </script>
     </body>
 </html>
